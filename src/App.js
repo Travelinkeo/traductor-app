@@ -107,7 +107,7 @@ export default function App() {
     let output = '';
 
     flights.forEach(flight => {
-      const match = flight.match(/^\s*(\d+)\s*([A-Z0-9]{2})\s*(\d+\s*[A-Z]*)\s+(\d{2}[A-Z]{3})\s+\w\s+(\w{3})(\w{3})\s+.*?\s+(\d{4})\s+(\d{4})(\d{2}[A-Z]{3})?.*/);
+      const match = flight.match(/^\s*(\d+)\s*([A-Z0-9]{2})\s*(\d+\s*[A-Z]*)\s+(\d{2}[A-Z]{3})\s+\w\s+(\w{3})(\w{3})\W.*?\s+(\d{4})\s+(\d{4})\s+(\d{2}[A-Z]{3})?.*/);
       if (!match) {
         output += `<div class="error">Error: Formato incorrecto en la línea "${flight}".</div>`;
         return;
@@ -125,12 +125,8 @@ export default function App() {
 
       output += `
         <div class="result">
-        Vuelo <strong>${airlineCode} ${flightNumber}</strong>,
-        Aerolínea: <strong>${airlinesData[airlineCode] || "Código desconocido (" + airlineCode + ")"}</strong><br>
-        Fecha de salida: ${departureDate}, 
-        Hora de salida: ${departureTime}<br>
-        Fecha de llegada: ${arrivalDate}${arrivalDateOffset}, 
-        Hora de llegada: ${arrivalTime}<br>
+        Vuelo <strong>${airlineCode} ${flightNumber}</strong>, Aerolínea: <strong>${airlinesData[airlineCode] || "Código desconocido (" + airlineCode + ")"}</strong><br>
+        Fecha de Vuelo: ${departureDate}, Hora de salida: ${departureTime} → Hora de llegada: ${arrivalTime}${arrivalDateOffset}<br>
         Ruta: ${origin} → ${destination}<br>
         </div>
       `;
@@ -162,12 +158,8 @@ export default function App() {
 
       output += `
         <div class="result">
-        Vuelo <strong>${airlineCode} ${flightNumber}</strong>, 
-        Aerolínea: <strong>${airlinesData[airlineCode] || "Código desconocido (" + airlineCode + ")"}</strong><br>
-        Fecha de salida: ${departureDate},
-        Hora de salida: ${departureTime}<br>
-        Fecha de llegada: ${departureDate}${arrivalDateOffset},
-        Hora de llegada: ${arrivalTime}<br>
+        Vuelo <strong>${airlineCode} ${flightNumber}</strong>, Aerolínea: <strong>${airlinesData[airlineCode] || "Código desconocido (" + airlineCode + ")"}</strong><br>
+        Fecha de Vuelo: ${departureDate}, Hora de salida: ${departureTime} → Hora de llegada: ${arrivalTime}${arrivalDateOffset},
         Ruta: ${origin} → ${destination}<br>
         </div>
       `;
@@ -199,12 +191,8 @@ export default function App() {
 
       output += `
         <div class="result">
-        Vuelo <strong>${airlineCode} ${flightNumber}</strong>,
-        Aerolínea: <strong>${airlinesData[airlineCode] || "Código desconocido (" + airlineCode + ")"}</strong><br>
-        Fecha de salida: ${departureDate}, 
-        Hora de salida: ${departureTime}<br>
-        Fecha de llegada: ${arrivalDate}${arrivalDateOffset},
-        Hora de llegada: ${arrivalTime}<br>
+        Vuelo <strong>${airlineCode} ${flightNumber}</strong>, Aerolínea: <strong>${airlinesData[airlineCode] || "Código desconocido (" + airlineCode + ")"}</strong><br>
+        Fecha de Vuelo: ${departureDate}, Hora de salida: ${departureTime} →  Hora de llegada: ${arrivalTime}${arrivalDateOffset}<br>
         Ruta: ${origin} → ${destination}<br>
         </div>
       `;
