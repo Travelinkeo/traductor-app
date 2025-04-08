@@ -306,5 +306,6 @@
     {"code": "LA", "name": "Latam"},
     {"code": "VV", "name": "Viva Colombia"},
     {"code": "W2", "name": "Flexflight"},
+    {"code": "G6", "name": "Global Air"},
     {"code": "CM", "name": "Copa Airlines"}
   ]
