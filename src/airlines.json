@@ -305,5 +305,6 @@
     {"code": "T9", "name": "Turpial Airlines"},
     {"code": "LA", "name": "Latam"},
     {"code": "VV", "name": "Viva Colombia"},
+    {"code": "W2", "name": "Flexflight"},
     {"code": "CM", "name": "Copa Airlines"}
   ]
