@@ -1903,6 +1903,7 @@
     {"code": "ZSA", "name": "San Salvador"},
     {"code": "VIG", "name": "Vigia"},
     {"code": "PVG", "name": "Shanghai-Pudong"},
+    {"code": "NLU", "name": "Ciudad de Mexico AIFA"},
     {"code": "ZTH", "name": "Zakinthos"}
     
   ]
